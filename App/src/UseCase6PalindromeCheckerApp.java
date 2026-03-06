@@ -48,7 +48,7 @@ public class UseCase6PalindromeCheckerApp {
 
         // Insert each character into both queue and stack
         for (char c : input.toCharArray()) {
-            queue.enqueue(c); // Use add() or offer() for Queue interface
+            queue.add(c); // Use add() or offer() for Queue interface
             stack.push(c);
         }
 
@@ -58,7 +58,7 @@ public class UseCase6PalindromeCheckerApp {
         // Compare characters until the queue becomes empty
         while (!queue.isEmpty()) {
             // Match dequeue (queue) output with pop (stack) output
-            if (queue.dequeue() != stack.pop()) { // Use remove() or poll() for Queue interface
+            if (queue.remove() != stack.pop()) { // Use remove() or poll() for Queue interface
                 isPalindrome = false;
                 break;
             }
